@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef _PERSON_HPP
 #define _PERSON_HPP
 #include <iostream>
@@ -13,9 +14,15 @@ protected:
 public:
 	// Ако стойността по подразбиране на параметъра name е nullptr, трябва да се внимава с обработката и копирането на стойността
 	Person(char const* name = "\0", unsigned const& ageData = 0);
+	~Person();
+	Person(Person const& other);
+	Person& operator=(Person const& other);
+
+	Person(Person && other);
+	Person& operator=(Person && other);
+
 	
 	void print() const;
-  // TODO: да се добавят останалите компоненти от каноничното представяне. Те са задължителен елемент заради динамичното заделяне на памет
 };
 
 #endif
