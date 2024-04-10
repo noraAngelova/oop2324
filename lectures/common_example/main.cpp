@@ -18,5 +18,22 @@ int main() {
     p2 = p3;
     p2.print();
 
+
+    // Сравнява два обекта
+    if (p == p2) {
+        std::cout << "It is the same person" << std::endl;
+    }
+
+    // Сравнява два обекта по възраст
+    if (p < p2) {
+        std::cout << "\n p is younger than p2";
+    }
+    
+    // Въвежда и извежда информация за потребител от поток
+    Person streamPerson;
+    std::cout << "\n Enter a user data - capacity, name and age:" << std::endl;
+    std::cin >> streamPerson;
+    std::cout << streamPerson << std::endl;
+
     return 0;
 }
