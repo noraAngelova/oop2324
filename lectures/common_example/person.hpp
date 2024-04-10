@@ -20,9 +20,15 @@ public:
 
 	Person(Person && other);
 	Person& operator=(Person && other);
-
 	
 	void print() const;
+
+	// Предефиниране на оператори
+	bool operator<(Person const& other) const;
+	bool operator==(Person const& other) const;
+
+	friend std::istream& operator>>(std::istream& is, Person& p);
+	friend std::ostream& operator<<(std::ostream& os, Person& p);
 };
 
 #endif
