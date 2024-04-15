@@ -36,6 +36,9 @@ Person::Person(Person && other) {
 
 Person& Person::operator=(Person const& other) {
 	if (this != &other) {
+		age = other.age;
+		other.age = 0;
+
 		delete[] firstName;
 		copy(other.firstName);
 	}
