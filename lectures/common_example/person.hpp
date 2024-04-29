@@ -14,14 +14,14 @@ protected:
 public:
 	// Ако стойността по подразбиране на параметъра name е nullptr, трябва да се внимава с обработката и копирането на стойността
 	Person(char const* name = "\0", unsigned const& ageData = 0);
-	~Person();
+	virtual ~Person();
 	Person(Person const& other);
 	Person& operator=(Person const& other);
 
 	Person(Person && other);
 	Person& operator=(Person && other);
 	
-	void print() const;
+	virtual void print() const;
 
 	// Предефиниране на оператори
 	bool operator<(Person const& other) const;
