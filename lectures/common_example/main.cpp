@@ -78,5 +78,10 @@ int main() {
     t3.print();
     std::cout << std::endl;
 
+    Person** arr = new Person * [10];
+    arr[1] = &t2; // може да бъде и към динамично заделен обект (new Teacher), трябва динамичната памет да се освободи
+
+    delete[10] arr;
+
     return 0;
 }
